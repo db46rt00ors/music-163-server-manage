@@ -17,11 +17,6 @@ const routes = [
     path: '/recommend',
     name: 'recommend',
     component: () => import('../views/recommend/index.vue')
-  },
-  {
-    path: '/upload',
-    name: 'upload',
-    component: () => import('../views/upload/index.vue')
   },{
     path:'/*',redirect:'/album'
   }

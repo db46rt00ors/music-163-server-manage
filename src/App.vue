@@ -38,10 +38,6 @@ export default {
                 },{
                     title: "热门歌曲",
                     url: "/recommend"
-                },
-                {
-                    title: "上传信息",
-                    url: "/upload"
                 }
             ]
         };
