@@ -16,6 +16,7 @@
                         v-for="(item, index) of navlist"
                         :key="index"
                         v-on:click.native="routerGo(item.url)"
+                        :class="{cur: $route.fullPath === item.url}"
                     >{{item.title}}</el-col>
                 </el-col>
                 <el-col :span="20" class="router-view">
@@ -68,8 +69,12 @@ export default {
         color: #fff;
         line-height: 50px;
         padding-left: 20px;
-        border-top: 1px solid #fff;
+        border-top: 1px solid #a1cfff;
         cursor: pointer;
+        &.cur{
+            color: red;
+            background-color dodgerblue;
+        }
     }
 
     .router-view {

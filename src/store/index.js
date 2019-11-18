@@ -16,15 +16,13 @@ export default new Vuex.Store({
     },
     actions: {
         async GETMUSIC({ commit }, payload) {
-            // console.log("payload:",payload);
             var data = await fetch('/getmusic',{
                 method:"POST",
                 headers:{
                     'content-type': 'application/json'
                 },
                 body: JSON.stringify(payload)
-            }).then(res => res.json());
-            // console.log("data:",data);
+            }).then(res => res.json()); 
             commit("GETMUSIC", {
                 type: payload.type,
                 data
